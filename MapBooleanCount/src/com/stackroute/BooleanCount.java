@@ -2,7 +2,7 @@ package com.stackroute;
 
 import java.util.HashMap;
 
-public class Main {
+public class BooleanCount {
 
     public static void main(String[] args) {
         String str = "a,b,c,d,a,c,c";
