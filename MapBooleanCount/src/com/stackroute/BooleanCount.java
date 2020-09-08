@@ -1,24 +1,27 @@
 package com.stackroute;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class BooleanCount {
-
+/*Main class to return true for string having count greater than 2*/
     public static void main(String[] args) {
         String str = "a,b,c,d,a,c,c";
+        /*Convert string to array*/
         String[] strArray = str.trim().split("[\\s@.?+-_,*]+");
-        HashMap<String, Integer> map = new HashMap<>();
+        System.out.println("Input String:\n"+Arrays.toString(strArray));
+        /*Convert array to map and stores boolean true if the word count greater than 2*/
+        HashMap<String, Boolean> map = new HashMap<>();
         int count = 0;
         /*Adding values to the map*/
         for (String word : strArray) {
             if (map.containsKey(word)) {
-                count = map.get(word);
-                map.put(word, count + 1);
+                map.put(word, true);
             } else {
-                map.put(word, 1);
+                map.put(word, false);
             }
         }
-        System.out.println(map);
-        System.out.println(count);
+        System.out.println("\nOutput:\n"+map);
+
     }
 }
